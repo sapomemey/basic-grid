@@ -1,0 +1,23 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: [start] minmax(2rem, 16rem) [middle] 1fr [end];
+    grid-template-rows: [start]8rem [end-header] 1fr [start-footer] 8rem [end];
+}
+
+.box {
+    background-color: salmon;
+}
+
+.header {
+    grid-column: start/end;
+}
+
+.sidebar {
+    grid-column: start/middle;
+}
+
+.footer {
+    grid-column: start/end;
+}
