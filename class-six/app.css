@@ -1,0 +1,43 @@
+body {
+  background-color: gray;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 100px 1fr 1fr 100px;
+  grid-gap: 1rem;
+  grid-template-areas: 
+    "header header"
+    "aside main"
+    "aside main"
+    "footer footer";
+}
+
+.overlap {
+  grid-column: header-start/aside-end;
+  grid-row: header-start/3;
+  background-color: rgba(0,0,255,0.3);
+}
+
+header {
+  background-color: salmon;
+  grid-area: header;
+  
+}
+
+aside {
+  background-color: salmon;
+  grid-area: aside;
+}
+
+main {
+  background-color: salmon;
+  grid-area: main;
+}
+
+footer {
+  background-color: salmon;
+  grid-area: footer;
+}
